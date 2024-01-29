@@ -16,10 +16,6 @@ pub fn build(b: *std.Build) !void {
     const backend = b.option(Backend, "backend", "API Backend") orelse .default;
 
     const vulkan_dep = b.dependency("vulkan_zig_generated", .{});
-    const mach_gpu_dep = b.dependency("mach_gpu", .{
-        .target = target,
-        .optimize = optimize,
-    });
     const mach_objc_dep = b.dependency("mach_objc", .{
         .target = target,
         .optimize = optimize,
@@ -34,7 +30,6 @@ pub fn build(b: *std.Build) !void {
         .root_source_file = .{ .path = "src/main.zig" },
         .imports = &.{
             .{ .name = "vulkan", .module = vulkan_dep.module("vulkan-zig-generated") },
-            .{ .name = "gpu", .module = mach_gpu_dep.module("mach-gpu") },
             .{ .name = "objc", .module = mach_objc_dep.module("mach-objc") },
             .{ .name = "build-options", .module = build_options.createModule() },
         },

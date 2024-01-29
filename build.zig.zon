@@ -17,10 +17,6 @@
             .url = "https://pkg.machengine.org/vulkan-zig-generated/378bed4e37007cef95b46ad9fadd6e192827ebba.tar.gz",
             .hash = "1220ccb48181cb849b64363142b78182161b3662959d81a2463df009612011fa5043",
         },
-        .mach_gpu = .{
-            .url = "https://pkg.machengine.org/mach-gpu/7f6792dbc5cd41da5f54b322b6d5be79d6dda2f1.tar.gz",
-            .hash = "122044bcebd28b7d54fb40cbebc04ef6bab0a385952e3193bcf90b37e062ce382495",
-        },
         .mach_objc = .{
             .url = "https://pkg.machengine.org/mach-objc/bfe6d002fd5a35c0d7d470cd60a58abad14fc1bf.tar.gz",
             .hash = "12204073b48a4f3cf7e4dcc3502690eee77fa1805b4aa5cb5e2ed67eed184b8a8371",
